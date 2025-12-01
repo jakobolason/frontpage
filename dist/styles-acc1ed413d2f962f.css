@@ -1,0 +1,155 @@
+/* --------------------- Open Props --------------------------- */
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.min.css";
+@import "https://unpkg.com/open-props/buttons.min.css";
+/* ------------------------------------------------------------ */
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background-color: #f59e0b;
+  color: var(--gray-9);
+  font-family: var(--font-sans);
+}
+
+.poster-layout {
+  width: 100%;
+  max-width: 800px; /* Limits width so it doesn't span 4k screens */
+  padding: var(--size-4);
+  /* The container is centered, but text aligns to its left edge */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns items to the left */
+  justify-content: center;
+  text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.2);
+}
+
+/* THE GIANT TITLE */
+h1.name-title {
+  font-size: var(--font-size-8);
+  font-weight: var(--font-weight-9);
+  line-height: 1;
+  margin: 0 0 var(--size-5) 0;
+  width: 100%;
+  text-align: left;
+  text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.2);
+}
+
+/* THE CONTENT BELOW */
+.content-block {
+  /* We limit the width of the description so the Title looks wider */
+  max-width: 600px;
+  text-align: left;
+}
+
+h3 {
+  font-weight: var(--font-weight-3);
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* BUTTONS */
+.button-row {
+  display: flex;
+  gap: var(--size-3);
+  margin-top: var(--size-6);
+  flex-wrap: wrap;
+}
+
+.btn-dark {
+  background-color: var(--gray-9);
+  color: #f59e0b;
+  border: none;
+  font-weight: var(--font-weight-6);
+  padding-inline: var(--size-5);
+}
+
+.btn-dark:hover {
+  background-color: black;
+  color: white;
+}
+
+.btn-outline-dark {
+  background-color: transparent;
+  border: 2px solid var(--gray-9);
+  color: var(--gray-9);
+  font-weight: var(--font-weight-6);
+}
+
+.btn-outline-dark:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.code-tag {
+  font-family: var(--font-mono);
+  background: var(--gray-9);
+  color: #f59e0b; /* Orange text */
+  padding: var(--size-1) var(--size-2);
+  border-radius: var(--radius-2);
+  font-weight: bold;
+}
+
+/* ------------------------------------------------------------ */
+/* PROJECTS PAGE STYLES */
+/* ------------------------------------------------------------ */
+.project-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-row {
+  display: flex;
+  justify-content: space-between; /* Pushes text left, button right */
+  align-items: center; /* Vertically centers them */
+  padding-block: var(--size-5); /* Vertical breathing room */
+  /* The "Industrial" Divider Line */
+  border-bottom: 2px solid var(--gray-9);
+  gap: var(--size-4); /* Space between text and button on mobile */
+}
+
+/* Make the first item have a top border too, to frame the list */
+.project-row:first-child {
+  border-top: 2px solid var(--gray-9);
+}
+
+.project-info {
+  /* Takes up all available space, pushing the button away */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.project-title {
+  font-weight: var(--font-weight-8);
+  font-size: var(--font-size-4);
+  margin-bottom: var(--size-1);
+  color: var(--gray-9);
+}
+
+.project-desc {
+  font-weight: var(--font-weight-4); /* Slimmer than title */
+  font-size: var(--font-size-2);
+  color: var(--gray-8); /* Slightly softer black */
+  max-width: 60ch; /* Optimal reading length */
+}
+
+/* A specialized arrow button for the repo link */
+.btn-arrow {
+  font-size: var(--font-size-4);
+  color: var(--gray-9);
+  text-decoration: none;
+  font-weight: bold;
+  padding: var(--size-2);
+  border: 2px solid transparent;
+  border-radius: var(--radius-round);
+  transition: all 0.2s ease;
+}
+
+.btn-arrow:hover {
+  background-color: var(--gray-9);
+  color: #f59e0b; /* Text turns Orange on Hover */
+}

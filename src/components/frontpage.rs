@@ -31,8 +31,8 @@ pub fn FrontPage() -> impl IntoView {
                 </div>
 
                 <div style="margin-top: var(--size-6); display: flex; gap: var(--size-4);">
-                     <a href="https://github.com" class="btn-text" style="color: white; text-decoration: underline;">"GitHub"</a>
-                     <a href="https://linkedin.com" class="btn-text" style="color: white; text-decoration: underline;">"LinkedIn"</a>
+                     <a href="https://github.com/jakobolason" class="btn-text" style="color: white; text-decoration: underline;">"GitHub"</a>
+                     <a href="https://www.linkedin.com/in/jakob-olason-8b005725a/" class="btn-text" style="color: white; text-decoration: underline;">"LinkedIn"</a>
                 </div>
             </div>
 
