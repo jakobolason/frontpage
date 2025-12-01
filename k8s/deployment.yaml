@@ -29,7 +29,7 @@ spec:
         #   mountPath: /html
       volumes:
       - name: html
-          hostPath:
+        hostPath:
             path: /home/jakob/frontpage/dist
             type: Directory
 ---
