@@ -2,17 +2,14 @@
 @import "https://unpkg.com/open-props";
 @import "https://unpkg.com/open-props/normalize.min.css";
 @import "https://unpkg.com/open-props/buttons.min.css";
-
 /* ------------------------------------------------------------ */
-
 body {
   min-height: 100vh;
   margin: 0;
   display: grid;
   place-items: center; /* Keeps the whole block vertically centered */
-  
-  background-color: #f59e0b; 
-  color: var(--gray-9); 
+  background-color: #f59e0b;
+  color: var(--gray-9);
   font-family: var(--font-sans);
 }
 
@@ -20,7 +17,6 @@ body {
   width: 100%;
   max-width: 800px; /* Limits width so it doesn't span 4k screens */
   padding: var(--size-4);
-  
   /* This creates the "Slightly Left" effect: */
   /* The container is centered, but text aligns to its left edge */
   display: flex;
@@ -36,9 +32,8 @@ h1.name-title {
   font-weight: var(--font-weight-9); /* Extra Bold */
   line-height: 1;
   margin: 0 0 var(--size-5) 0; /* Margin bottom */
-  
   /* Makes the title "Wider" than the content below */
-  width: 100%; 
+  width: 100%;
   text-align: left;
   text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.2);
 }
@@ -46,13 +41,13 @@ h1.name-title {
 /* THE CONTENT BELOW */
 .content-block {
   /* We limit the width of the description so the Title looks wider */
-  max-width: 400px; 
+  max-width: 400px;
   text-align: left;
 }
 
 /* SLIM HEADERS for the subtitles */
 h3 {
-  font-weight: var(--font-weight-3); 
+  font-weight: var(--font-weight-3);
   margin: 0;
   opacity: 0.9; /* Slightly softer white */
 }
@@ -82,8 +77,10 @@ h3 {
 
 .code-tag {
   font-family: var(--font-mono);
-  background: rgba(255,255,255, 0.2); /* Semi-transparent white */
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
   padding: var(--size-1) var(--size-2);
   border-radius: var(--radius-2);
   color: white;
 }
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../public/styles.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAA;AACQ;AACA;AACA;AAER;AAEA;EACE;EACA;EACA;EACA;EAEA;EACA;EACA;;;AAGF;EACE;EACA;EACA;AAEA;AACA;EACA;EACA;EACA;EACA;EACA;;;AAGF;AACA;EACE;EACA;EACA;EACA;AAEA;EACA;EACA;EACA;;;AAGF;AACA;AACE;EACA;EACA;;;AAGF;AACA;EACE;EACA;EACA;;;AAGF;AACA;EACE;EACA;EACA;EACA;;;AAGF;AACA;EACE;EACA;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA%22,%22file%22:%22styles.css%22%7D */
