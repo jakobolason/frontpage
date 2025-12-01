@@ -9,8 +9,7 @@ body {
   min-height: 100vh;
   margin: 0;
   display: grid;
-  place-items: center; /* Keeps the whole block vertically centered */
-  
+  place-items: center;   
   background-color: #f59e0b; 
   color: var(--gray-9); 
   font-family: var(--font-sans);
@@ -21,7 +20,6 @@ body {
   max-width: 800px; /* Limits width so it doesn't span 4k screens */
   padding: var(--size-4);
   
-  /* This creates the "Slightly Left" effect: */
   /* The container is centered, but text aligns to its left edge */
   display: flex;
   flex-direction: column;
@@ -32,12 +30,9 @@ body {
 
 /* THE GIANT TITLE */
 h1.name-title {
-  font-size: var(--font-size-8); /* Massive text */
-  font-weight: var(--font-weight-9); /* Extra Bold */
+  font-size: var(--font-size-8);   font-weight: var(--font-weight-9);
   line-height: 1;
-  margin: 0 0 var(--size-5) 0; /* Margin bottom */
-  
-  /* Makes the title "Wider" than the content below */
+  margin: 0 0 var(--size-5) 0;   
   width: 100%; 
   text-align: left;
   text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.2);
@@ -50,12 +45,10 @@ h1.name-title {
   text-align: left;
 }
 
-/* SLIM HEADERS for the subtitles */
 h3 {
   font-weight: var(--font-weight-3); 
   margin: 0;
-  opacity: 0.9; /* Slightly softer white */
-}
+  opacity: 0.9; }
 
 /* BUTTONS */
 .button-row {
@@ -65,25 +58,33 @@ h3 {
   flex-wrap: wrap;
 }
 
-/* Customizing buttons to look good on Orange */
-.btn-white {
+.btn-dark {
   background-color: var(--gray-9);
-  color: white;
+  color: #f59e0b; 
   border: none;
   font-weight: var(--font-weight-6);
   padding-inline: var(--size-5);
 }
-
-.btn-outline {
-  background-color: transparent;
-  border: 2px solid white;
+.btn-dark:hover {
+  background-color: black;
   color: white;
+}
+
+.btn-outline-dark {
+  background-color: transparent;
+  border: 2px solid var(--gray-9);
+  color: var(--gray-9);
+  font-weight: var(--font-weight-6);
+}
+.btn-outline-dark:hover {
+  background-color: rgba(0,0,0, 0.05);
 }
 
 .code-tag {
   font-family: var(--font-mono);
-  background: rgba(255,255,255, 0.2); /* Semi-transparent white */
+  background: var(--gray-9);
+  color: #f59e0b;            /* Orange text */
   padding: var(--size-1) var(--size-2);
   border-radius: var(--radius-2);
-  color: white;
+  font-weight: bold;
 }

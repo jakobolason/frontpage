@@ -10,18 +10,18 @@ pub fn FrontPage() -> impl IntoView {
             <div class="content-block">
 
                 <div style="margin-bottom: var(--size-4)">
-                    <h3>"Building with " <span class="code-tag">"Rust"</span></h3>
-                    <p style="margin-top: var(--size-2); font-size: var(--font-size-3); opacity: 0.8;">
+                    <h3>"Love building with " <span class="code-tag">"Rust"</span></h3>
+                    <p style="margin-top: var(--size-3); font-size: var(--font-size-3); opacity: 1.5;">
                         "Computer Engineering student at Aarhus."
                     </p>
                 </div>
 
                 <div class="button-row">
-                    <a href="https://github.com/jakobolason" target="_blank" class="btn btn-white">
+                    <a href="https://github.com/jakobolason" target="_blank" class="btn btn-dark">
                         "My Projects"
                     </a>
 
-                    <a href="mailto:jakobolason@proton.me" class="btn btn-outline">
+                    <a href="mailto:jakobolason@proton.me" class="btn btn-outline-dark">
                         "Contact Me"
                     </a>
                 </div>
