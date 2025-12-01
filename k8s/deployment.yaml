@@ -20,13 +20,13 @@ spec:
         volumeMounts:
         - name: html
           mountPath: /usr/share/nginx/html
-      initContainers:
-      - name: git-clone
-        image: alpine/git
-        command: ['sh', '-c', 'git clone https://github.com/jakobolason/frontpage.git /tmp/repo && cp -r /tmp/repo/dist/* /html/']
-        volumeMounts:
-        - name: html
-          mountPath: /html
+      # initContainers:
+      # - name: git-clone
+      #   image: alpine/git
+      #   command: ['sh', '-c', 'git clone https://github.com/jakobolason/frontpage.git /tmp/repo && cp -r /tmp/repo/dist/* /html/']
+        # volumeMounts:
+        # - name: html
+        #   mountPath: /html
       volumes:
       - name: html
         emptyDir: {}
