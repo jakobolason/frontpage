@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <!-- Add a plain CSS file: see https://trunkrs.dev/assets/#css -->
+  <!-- If using Tailwind with Leptos CSR, see https://trunkrs.dev/assets/#tailwind instead-->
+  <link rel="stylesheet" href="/styles-b5eb075cb5908791.css" integrity="sha384-z81odaZQ6a5WhRrkbxOfk6unNzh76wIzcnOsVEZrWICZlAB3CP0qZHEFT9ZauTJb"/>
+
+  <!-- Include favicon in dist output: see https://trunkrs.dev/assets/#icon -->
+  <link rel="icon" href="/favicon-e9cbd8f50cc65bf2.ico" integrity="sha384-YobgLXwtz0GhXVUTHml49p32guapVFlEG8UpQdDVN3kekOqkQi+qSXEpwp+yM4BW"/>
+
+  <!-- include support for `wasm-bindgen --weak-refs` - see: https://rustwasm.github.io/docs/wasm-bindgen/reference/weak-references.html -->
+  
+<script type="module">
+import init, * as bindings from '/frontpage-b990f6e096c2030f.js';
+const wasm = await init({ module_or_path: '/frontpage-b990f6e096c2030f_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
+<link rel="modulepreload" href="/frontpage-b990f6e096c2030f.js" crossorigin="anonymous" integrity="sha384-LraBr6UfTXsewzar0xi+r3Z0R7GVqcraL12DX8QdCdd7c6kfXOqb4a/U/1wCcuqV"><link rel="preload" href="/frontpage-b990f6e096c2030f_bg.wasm" crossorigin="anonymous" integrity="sha384-xix1u3qkrJLYW/2BLVf/nuBlLSmfQLh6lCCheyJ9UWrP7CyO0yW/N54/Rf601pe+" as="fetch" type="application/wasm"></head>
+
+<body></body>
+
+</html>

@@ -29,7 +29,9 @@ spec:
         #   mountPath: /html
       volumes:
       - name: html
-        emptyDir: {}
+          hostPath:
+            path: /home/jakob/frontpage/dist
+            type: Directory
 ---
 apiVersion: v1
 kind: Service
