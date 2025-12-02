@@ -20,13 +20,6 @@ spec:
         volumeMounts:
         - name: html
           mountPath: /usr/share/nginx/html
-      # initContainers:
-      # - name: git-clone
-      #   image: alpine/git
-      #   command: ['sh', '-c', 'git clone https://github.com/jakobolason/frontpage.git /tmp/repo && cp -r /tmp/repo/dist/* /html/']
-        # volumeMounts:
-        # - name: html
-        #   mountPath: /html
       volumes:
       - name: html
         hostPath:
@@ -42,27 +35,3 @@ spec:
     app: frontpage
   ports:
   - port: 80
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: frontpage
-  # annotations:
-    # traefik.ingress.kubernetes.io/router.entrypoints: websecure
-    # cert-manager.io/cluster-issuer: letsencrypt-prod
-spec:
-  rules:
-  - host: jakobolason.dk 
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: frontpage
-            port:
-              number: 80
-  # tls:
-  # - hosts:
-  #   - jakobolason.dk 
-  #   secretName: frontpage-tls
