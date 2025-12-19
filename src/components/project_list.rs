@@ -1,4 +1,5 @@
 use leptos::prelude::*;
+use lucide_leptos::{ArrowRightFromLine, MoveLeft};
 
 #[derive(Clone)]
 struct ProjectData {
@@ -14,6 +15,11 @@ pub fn ProjectList() -> impl IntoView {
             name: "Family Graph",
             desc: "A small program that takes an .xls file with a specific formatting, to create a family tree in SVG format.",
             link: "https://github.com/jakobolason/family-graph",
+        },
+        ProjectData {
+            name: "Website for family graph",
+            desc: "Using the previously mentioned graph generator, Loco and Nuxt was used to create a password protected website to display the family graph.",
+            link: "https://tree.jakobolason.dk",
         },
         ProjectData {
             name: "KitchenGuard",
@@ -32,7 +38,10 @@ pub fn ProjectList() -> impl IntoView {
 
             <div style="width: 100%; margin-bottom: var(--size-6)">
                 <a href="/" style="color: var(--gray-9); text-decoration: none; font-weight: bold;">
-                    "← Back"
+                    <div class="btn-arrow" style="display: flex; align-items: center; gap: var(--size-2); width: 120px;">
+                        <MoveLeft />
+                        " Back"
+                    </div>
                 </a>
                 <h1 class="name-title" style="font-size: var(--font-size-7); margin-top: var(--size-3)">
                     "Selected Work"
@@ -48,8 +57,12 @@ pub fn ProjectList() -> impl IntoView {
                             <span class="project-desc">{p.desc}</span>
                         </div>
 
+                            <arrow-right-from-line acolor="red" size=48 />
                         <a href={p.link} target="_blank" class="btn-arrow" title="View Repo">
-                            "View →"
+                            <div style="display: flex; align-items: center; gap: var(--size-2);">
+                                "View "
+                                <ArrowRightFromLine />
+                            </div>
                         </a>
                     </div>
                 }).collect_view()}
